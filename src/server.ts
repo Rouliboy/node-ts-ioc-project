@@ -1,6 +1,6 @@
-import { InversifyExpressServer } from "inversify-express-utils";
-import container from "./inversify.config";
-import * as bodyParser from "body-parser";
+import { InversifyExpressServer } from 'inversify-express-utils';
+import container from './inversify.config';
+import * as bodyParser from 'body-parser';
 
 const server = new InversifyExpressServer(container);
 

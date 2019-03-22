@@ -1,6 +1,6 @@
-import { injectable } from "inversify";
-import IPostDAO from "../interfaces/dao/IPostDAO";
-import Post from "../models/Post";
+import { injectable } from 'inversify';
+import IPostDAO from '../interfaces/dao/IPostDAO';
+import Post from '../models/Post';
 
 export const post1 = new Post(1, 'Post numero 1');
 export const post2 = new Post(2, 'Post numero 2');

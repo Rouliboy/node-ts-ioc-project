@@ -1,19 +1,19 @@
 import 'mocha';
-import supertest from "supertest";
+import supertest from 'supertest';
 import 'reflect-metadata';
 
 import chai from 'chai';
 
-import { post1, post2 } from "../../../src/dao/DefaultPostDao";
-import server from "../../../src/server";
+import { post1, post2 } from '../../../src/dao/DefaultPostDao';
+import server from '../../../src/server';
 
 const expect = chai.expect;
 
 describe('PostController test', function () {
 
-  it("GET /posts endpoint works", (done) => {
+  it('GET /posts endpoint works', (done) => {
 
-    supertest(server).get("/posts")
+    supertest(server).get('/posts')
       .expect(200)
       .then(res => {
         expect(res.body).to.eql({ data: [post1, post2] });
@@ -22,9 +22,9 @@ describe('PostController test', function () {
 
   });
 
-  it("GET /posts/:id endpoint works", (done) => {
+  it('GET /posts/:id endpoint works', (done) => {
 
-    supertest(server).get("/posts/1")
+    supertest(server).get('/posts/1')
       .expect(200)
       .then(res => {
         expect(res.body).to.eql({ data: post1 });
@@ -33,10 +33,10 @@ describe('PostController test', function () {
 
   });
 
-  it("POST /posts endpoint works", (done) => {
+  it('POST /posts endpoint works', (done) => {
     const anyObject = {};
 
-    supertest(server).post("/posts")
+    supertest(server).post('/posts')
       .send(anyObject)
       .expect(201)
       .then(res => {
