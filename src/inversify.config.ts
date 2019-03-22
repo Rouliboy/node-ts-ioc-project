@@ -1,4 +1,4 @@
-import {Container} from "inversify";
+import { Container } from "inversify";
 import TYPES from "./constants/TYPES";
 
 import IPostService from "./interfaces/services/IPostService";
@@ -12,10 +12,10 @@ const myContainer = new Container();
 
 // Post
 myContainer
-    .bind<IPostService>(TYPES.PostService)
-    .to(DefaultPostService);
+  .bind<IPostService>(TYPES.PostService)
+  .to(DefaultPostService);
 myContainer
-    .bind<IPostDAO<Post, number>>(TYPES.PostDAO)
-    .to(DefaultPostDao);
+  .bind<IPostDAO<Post, number>>(TYPES.PostDAO)
+  .to(DefaultPostDao);
 
 export default myContainer;
