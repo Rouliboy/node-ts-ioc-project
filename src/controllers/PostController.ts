@@ -19,8 +19,7 @@ import TYPE from '../constants/TYPES';
 @controller("/posts")
 export class PostController implements interfaces.Controller {
 
-    private readonly _postService: IPostService
-    ;
+    private readonly _postService: IPostService;
 
     public constructor(@inject(TYPE.PostService) postService: IPostService) {
         this._postService = postService;
