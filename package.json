@@ -8,7 +8,9 @@
     "dev": "ts-node ./src/index.ts",
     "start": "node ./dist/src/index.js",
     "prod": "npm run compile && npm run start",
-    "test": "mocha -r ts-node/register test/**/*.spec.ts"
+    "tu": "mocha -r ts-node/register test/unit/**/*.spec.ts",
+    "ti": "mocha -r ts-node/register test/integration/**/*.spec.ts",
+    "test": "npm run tu && npm run ti"
   },
   "dependencies": {
     "body-parser": "1.18.3",
